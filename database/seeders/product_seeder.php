@@ -15,6 +15,6 @@ class product_seeder extends Seeder
      */
     public function run()
     {
-        DB::insert('insert into products (name, description, price) values (?, ?, ?)', ['Monitor', 'Dell',13000]);
+        DB::insert('insert into products (name, price, category, description, gallery) values (?, ?, ?, ?, ?)', ['Samsung S22R350FHM LED Monitor',14500, 'Monitor', 'Description not available.', 'https://www.itplus.com.bd/wp-content/uploads/2021/06/samsung-s22r350fhm.jpg']);
     }
 }
