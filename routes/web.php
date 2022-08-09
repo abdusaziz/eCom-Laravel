@@ -19,7 +19,9 @@ Route::get('/login', function () {
     return view('login');
 });
 
-Route::post('login', [UserController::class,'login'])->name('login');
+Route::post('login', [UserController::class,'login']);
 
-Route::get('/', [ProductController::class,'index'])->name('home');
-Route::get('detail/{id}', [ProductController::class,'detail'])->name('detail');
+Route::get('/', [ProductController::class,'index']);
+Route::get('detail/{id}', [ProductController::class,'detail']);
+Route::get('search', [ProductController::class,'search'])->name('search');
+Route::post('add_to_cart', [ProductController::class,'add_to_cart'])->name('add_to_cart');

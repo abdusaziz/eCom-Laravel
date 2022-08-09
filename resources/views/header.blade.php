@@ -13,15 +13,15 @@
           <a class="nav-link" href="#">Orders</a>
         </li>
         <li class="nav-item">          
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <form action="{{ route('search') }}" class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" name="query" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
           </form>
         </li>
       </ul>
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link pull-right" href="#">Add to Cart</a>
+          <a class="nav-link pull-right" href="#">Cart({{ App\Http\Controllers\ProductController::cartItem() }})</a>
         </li>
       </ul>
     </div>

@@ -14,7 +14,13 @@
             <h3>Price - <del class="text-error">$699</del> {{ $data->price }}</h3>
             <p class="muted">Inclusive of all taxes. Free home delivery.</p>
             <br>
-            <p><a href="#" class="btn btn-success btn-large">Add to Cart</a></p>
+            <p>
+                <form action="{{ route('add_to_cart') }}" method="post">
+                    @csrf
+                    <input type="text" name="product_id" value="{{ $data->id }}">
+                    <button class="btn btn-success btn-large">Add to Cart</button>
+                </form>                
+            </p>
             <p><a href="#" class="btn btn-primary btn-large">Buy Now</a></p>
         </div>
     </div>
